@@ -2,6 +2,9 @@ import 'package:broadcaster/broadcaster.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
+/// MultiBroadcasterProvider is a option to BroadcasterProvider
+///
+/// Mostly used as parent of MaterialApp widget
 class MultiBroadcasterProvider extends StatelessWidget {
   final List<BroadcasterCreator> creators;
   final Widget Function(BuildContext) builder;
