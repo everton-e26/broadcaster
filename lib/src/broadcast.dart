@@ -2,7 +2,12 @@ import 'package:rxdart/rxdart.dart';
 import 'ibroadcast.dart';
 
 class Broadcast<T> implements IBroadcast<T> {
-  final BehaviorSubject<T> _streamController = BehaviorSubject<T>();
+  Broadcast({T initialValue}) {
+    _streamController = initialValue != null
+        ? BehaviorSubject<T>.seeded(initialValue)
+        : BehaviorSubject<T>();
+  }
+  BehaviorSubject<T> _streamController;
 
   Stream<T> get stream => _streamController.stream;
 
@@ -10,7 +15,7 @@ class Broadcast<T> implements IBroadcast<T> {
 
   set value(T v) => _streamController.add(v);
 
-  close() {
+  endTransmission() {
     _streamController.close();
   }
 }
