@@ -1,6 +1,6 @@
 name: broadcaster
 description: A simple state management for flutter to offer a new option to your application
-version: 1.0.1
+version: 1.0.2
 author: Everton Santos <everton.build@gmail.com>
 homepage: https://github.com/everton-e26/broadcaster
 
@@ -8,7 +8,7 @@ environment:
   sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
-  provider: ^4.0.3
+  provider: ^4.0.4
   rxdart: ^0.23.1
   flutter:
     sdk: flutter
