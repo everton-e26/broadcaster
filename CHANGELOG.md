@@ -1,4 +1,4 @@
-## [1.0.2] - updated provider and rxdart dependency
+## [1.0.4] - updated provider and rxdart dependency
 
 ## [1.0.2] - updated provider dependency
 
