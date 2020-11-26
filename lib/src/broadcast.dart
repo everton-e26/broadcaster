@@ -13,7 +13,11 @@ class Broadcast<T> implements IBroadcast<T> {
   /// Expose the current value of the broadcast
   T get value => _streamController.value;
 
-  set value(T v) => _streamController.add(v);
+  set value(T v) {
+    if (!_streamController.isClosed) {
+      _streamController.add(v);
+    }
+  }
 
   endTransmission() {
     _streamController.close();
